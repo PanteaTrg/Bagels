@@ -6,15 +6,14 @@ def get_input(max_dig: int):
     try_cnt = 1
 
     while try_cnt <= max_try:
-        print()
-        print(f'Try number: {try_cnt}')
+        print(f'Try #{try_cnt}')
         user_input = input('>')
         if len(user_input) != max_dig or not user_input.isdecimal():
             if try_cnt == 1:
                 print('دوست عزیز! عدد 3 رقمی وارد کن')
                 try_cnt += 1
             elif try_cnt == 2:
-                print('برای بار دوم خواهش می کنم عدد وارد کن!')
+                print('برای بار سوم خواهش می کنم عدد وارد کن!')
                 try_cnt += 1
             elif try_cnt == 3:
                 print('عدد 3 رقمی لطفا!!')
@@ -55,10 +54,10 @@ while True:
     while number_of_guess <= max_guesses:
 
         print()
+        print()
         print(f'Guess #{number_of_guess}: ')
         input_number = get_input(max_digit)
         if input_number == 0:
-            print('BYE BYE')
             break
 
         else:
@@ -85,3 +84,4 @@ while True:
     answer = input('\nDo you want to play again?: [Y/N]').lower()
     if answer == 'n':
         print('Thanks for playing! See you Soon :) ')
+        break
